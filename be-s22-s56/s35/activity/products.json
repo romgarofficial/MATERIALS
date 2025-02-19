@@ -1,0 +1,9 @@
+{
+    "_id": 25,
+    "name": "Humidifier",
+    "description": "Make your home smell fresh any time.",
+    "price": 300,
+    "stocks": 1286,
+    "isActive": true,
+    "sku": "052321-SMHMD"
+}

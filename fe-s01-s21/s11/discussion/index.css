@@ -1,0 +1,136 @@
+/* CSS Reset */
+/*Allows to easily manipulate the sizes and positioning of elements*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*Google Font*/
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*navigation bar*/
+/* 1rem = 16px (default font size) */
+nav {
+    /*shorthand property*/
+    /*Applied padding to all sides*/
+    /*Value is 12.8 pixels based on the root element*/
+    /*Creates space from between the ul tag and the nav element*/
+    padding: 0.8rem;
+    /*properties that make up the "padding" property*/
+    /*padding-top: 0.8rem;
+    padding-right: 0.8rem;
+    padding-bottom: 0.8rem;
+    padding-left: 0.8rem;*/
+    /*creates space between the nav and the intro section*/
+    margin-bottom: 2rem;
+    border-bottom: 1px solid gray;
+    list-style-type: none;
+}
+
+/*margin vs padding*/
+/*margin is best used when creating space between elements.*/
+/*padding is best used when creating space between an element's border and it's content.*/
+
+nav .nav, nav .nav-logo {
+    /*creates space between the ul and the nav element*/
+    margin: 0.5rem;
+    /*changes elements to inline elements*/
+    display: inline;
+}
+
+/*intro section*/
+#intro {
+    /*creates space between the contents of the intro section and the it's border*/
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+    /*shorthand property*/
+    /*padding: 2rem 10% 3rem;*/
+    text-align: center;
+}
+
+.header {
+    /*best used when horizontally aligning text instead of using margin and padding*/
+    text-align: center;
+}
+
+#intro h2, #intro p {
+    /*creates space between the contents of the intro section*/
+    margin-bottom: 1rem;
+}
+
+#intro button {
+    color: white;
+    /*changes the thickness of text*/
+    font-weight: bold;
+    background-color: #c2195b;
+    border-radius: 25px;
+    font-size: 1rem;
+    /*creates space between the button text and the border*/
+    padding: 1rem;
+}
+
+/*succeed info section*/
+/*exact same properties as the intro section but can have it's own CSS rule for flexibility.*/
+#succeed-info {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2rem;
+    padding-bottom: 3rem;
+}
+
+
+#succeed-info h2 {
+    /*creates space between the header and the card section*/
+    margin-bottom: 1rem;
+}
+
+#succeed-info h3 {
+    text-align: center;
+    /*creates space between the h3 tags and the paragraph tags*/
+    margin-bottom: 1rem;
+}
+
+#succeed-info .card{
+    /*allows the cards to appear beside each other*/
+    display: inline-block;
+    /*aligns elements with the tallest element in line*/
+    /*used with the "inline-block" value*/
+    vertical-align: top;
+    /* 
+        Height: The height property sets the exact height of an element. 
+        The element's height will be fixed to the specified value and it will not expand beyond that height. 
+        Even if the content inside it requires more space.
+
+        Min-height: The min-height property sets a minimum height for an element. 
+        It specifies the minimum height that the element should have, allowing it to expand vertically if needed to accommodate its content. 
+        If the content requires more space than the specified minimum height, the element will expand to fit the content. 
+        However, if the content is smaller than the minimum height, the element will still take up at least the minimum height.
+    */
+    min-height: 175px;
+
+    /*measurement is based on equally dividing the parent container's width*/
+    /*only use 30% and not 33.33% because of margin to avoid overflow and horizontal scrolling*/
+    width: 30%;
+    /*creates horizontal spacing between cards*/
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+/*footer*/
+footer {
+    /*creates space between the span tags and the footer border*/
+    padding: 0.7rem;
+}
+
+footer span {
+    /*creates space horizontally between span tags*/
+    /*best to use equal measurement on both sides for horizontal alignment.*/
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    /*margin: 0 0.5rem;*/
+}

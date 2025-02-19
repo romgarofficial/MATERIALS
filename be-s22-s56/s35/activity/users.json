@@ -1,0 +1,12 @@
+
+{
+    "id": 1,
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "johndoe@mail.com",
+    "password": "john1234",
+    "isAdmin": false,
+    "mobileNo": "09237593671"
+}
+
+

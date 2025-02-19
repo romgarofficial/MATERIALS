@@ -1,0 +1,166 @@
+=====================================
+MongoDB - Intro to Database and NoSQL
+=====================================
+
+References:
+	Relational Database
+		https://www.oracle.com/ph/database/what-is-a-relational-database/
+	Introduction to SQL
+		https://www.w3schools.com/sql/sql_intro.asp
+	Non-Relational Database and NoSQL
+		https://docs.microsoft.com/en-us/azure/architecture/data-guide/big-data/non-relational-data
+	Intro to MongoDB
+		https://docs.mongodb.com/manual/introduction/
+	Databases and Collections
+		https://docs.mongodb.com/manual/core/databases-and-collections/
+	Mongo DB Community Server Installation
+		Linux
+			https://docs.mongodb.com/manual/administration/install-on-linux/
+		MacOS
+			https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
+		Windows
+			https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/
+	Mongo DB Community Server
+		https://www.mongodb.com/try/download/community
+	Mongo DB Account Registration
+		https://account.mongodb.com/account/register
+	Google Public DNS
+		https://developers.google.com/speed/public-dns/docs/using
+	Open DNS
+		https://use.opendns.com/
+	MongoDB Manage mongod process
+		https://docs.mongodb.com/manual/tutorial/manage-mongodb-processes/
+	MongoDB Troubleshooting Connection Issues
+		https://docs.atlas.mongodb.com/troubleshoot-connection/
+	Robo3t Download
+		https://studio3t.com/download/?source=robomongo&medium=homepage
+	MongoDB Compass
+		https://docs.mongodb.com/compass/current/install/
+	Google Forms Activity Link
+		https://docs.google.com/forms/d/16lm-fraSOLSjrUgYo5b4eYhpinDeeB0H_JukdZ9BCs0/edit
+
+Definition of terms:
+	Batch Folder - The batch folder that will store all files of the students throughout the bootcamp. Normally located in the "Documents" folder of the device.
+	Application - Root folder for the application
+
+==========
+Discussion
+==========
+
+1. Present the slides and discuss the concepts found in our materials.
+	Browser > Google Slides
+
+		Important Note:
+			- Refer to "references" section of this file to find the documentations for S32 Discussion Slides, Relational Database, Introduction to SQL, Non-Relational Database and NoSQL, Intro to MongoDB and Databases and Collections.
+
+2. Install the Mongo DB Community Server
+	Device > Terminal
+
+		- Linux
+			wget -qO - https://www.mongodb.org/static/pgp/server-5.0.asc | sudo apt-key add -
+		- MacOS
+			brew tap mongodb/brew
+			brew install mongodb-community@5.0
+			brew services start mongodb/brew/mongodb-community
+		- Windows
+			https://www.mongodb.com/try/download/community
+
+		Important Note:
+			- Follow these steps after providing the students with the activity and when extra time is incurred in the session.
+			- Upon creation of this material Mongo DB Community Server 5.0 is the latest version.
+			- MongoDB installation in Linux and MacOS systems are done via terminal commands.
+			- MongoDB installation in windows is done by downloading the installer and double clicking on the downloaded file.
+			- The MongoDB Community Server will allow us to use MongoDB locally within our devices.
+			- The use of this will also give the students an idea that backend development is possible without access to the internet.
+			- Installing the MongoDB Community Server is best done due to students encountering issues with connecting to MongoDB Atlas, which is the online database for MongoDB, for a number of reasons.
+			- This will be used as a backup in case the students encounter connection issues to MongoDB Atlas.
+			- The instructor may have the students use this while troubleshooting issues encountered by students in preparation for future sessions.
+			- Checking the student's accessibility to MongoDB Community Server and Robo3t at the initial session for the MongoDB module will ensure a fluid discussion once the practical discussion of MongoDB is done.
+			- MongoDB Atlas is the online version of the MongoDB database while the MongoDB Community Server is the local counterpart of MongoDB Atlas.
+			- Refer to "references" section of this file to find the documentations for Mongo DB Community Server Installation and Mongo DB Community Server Download Link.
+
+3. Create a MongoDB account.
+	Browser > MongoDB
+
+		https://account.mongodb.com/account/register
+
+		Important Note:
+			- It is recommended that the students register an account using their professional gmail accounts requested by the CAs upon registration for the bootcamp.
+			- Make sure that registration is done through this page to ensure that the students may be able to follow along with the registration.
+			- MongoDB has several pages for creating accounts and some of them redirect the students to adding an organization to their MongoDB accounts.
+			- Creating an account using their gmail accounts will simplify the process of logging in using the Single Sign-On (SSO) approach where as long as their Google accounts are logged in their devices, they can easily just click on the "Log In With Google" button.
+			- If this occurs, have the students register any organization name. After this is done, guide the students in by requesting them to share their screen until they reach the cluster setup procedure after creating their accounts.
+			- Upon setting up of the students' accounts for "Database Access", have the students create an account with the password "admin123" which is equivalent to an 8 letter alphanumeric combination which is easy to remember providing the username as the prefix to the password and numbers starting from 1 to the nth number to complete an 8 character combination.
+			- Doing this will ease troubleshooting steps ensuring that the students have the same username and password which is easy to remember.
+			- The Database Access password may be changed anytime upon completion of the bootcamp to provide more security to their accounts.
+			- Upon setting up of the students' accounts for "Network Access", ensure that they create access to all devices by allowing access to anywhere using the 0.0.0.0/0 IP address which can be access via the following:
+				- Browser > MongoDB > Network Access > IP Access List Tab > Add IP Address Button.
+			- The "IP Access List" may be updated anytime and changed upon completion of the bootcamp to provide more security to their accounts.
+			- You may refer to the slides provided in the S23 Discussion slides to find the step by step procedure to have this completed.
+			- Refer to "references" section of this file to find the documentations for Mongo DB Acount Registration and S23 Discussion Slides.
+
+4. Run the mongo shell application.
+	Device > Terminal
+
+	MongoDB atlas
+		mongo "<MongoDB Connection String>"
+		mongo "<MongoDB Connection String>" --username <MongoDB Database Username> --password <MongoDB Database Password>
+
+	MongoDB Connection String
+		mongodb+srv://<Username>:<Password>@cluster0.7iowx.mongodb.net/<Database Name>?retryWrites=true&w=majority
+
+	local mongoDB
+		mongo "mongodb://localhost:27017/<Database Name>"
+
+		Important Note:
+			- All operating systems connect to the Mongo DB Atlas using the same command.
+			- The syntax provided above with angle braces (<>) means that the information need to be replaced with corresponding information established in the user's MongoDB account.
+			- The following information may be found via the following:
+				MongoDB Connection String
+					Browser > MongoDB > Databases > Connect > Connect Your Application
+				MongoDB Username and MongoDB Password
+					Browser > MongoDB > Database Access
+			- Students may encounter issues when connecting to MongoDB Atlas and running MongoDB locally in their devices.
+			- Several reasons may prevent them from connecting to MongoDB Atlas or running the MongoDB Community Server and the following are commonly encountered issues and the corresponding solutions:
+				- Service provider security
+					- Changing the DNS of their internet connection will mostly solve the issue.
+					- Refer to "references" section of this file to find the documentations for Google Public DNS and Open DNS.
+				- MongoDB processes
+					- This occurs because the MongoDB service is not running properly in their devices. Common troubleshooting steps to resolve this issue is to start/restart the services manually.
+					- Refer to "references" section of this file to find the documentation for MongoDB Manage mongod process.
+				- Incorrect username/password provided for the MongoDB Account
+					- Check if the correct username and password was provided in the MongoDB Connection String.
+					- The username may be found by accessing the following:
+						- Browser > MongoDB > Database Access
+				- Network access was not successfully established in the MongoDB account
+					- Make sure that the students register an IP address of 0.0.0.0/0 that allows access from any device during the bootcamp to prevent any issues from accessing their databases even if they switch to a different device.
+
+5. Download MongoDB Compass.
+	Browser > MongoDB Compass
+
+		Important Note:
+			- Installing MongoDB Compass will allow us to access a Graphical User Interface (GUI) for manipulating MongoDB database information locally.
+			- This is done to ensure that students may be able to view and manipulate their local MongoDB database.
+			- This also exposes the students to the use of third party applications that may be installed and used to perform different tasks on their local MongoDB database.
+			
+			- Refer to "references" section of this file to find the documentations for MongoDB Compass.
+
+6. Test the functionality of MongoDB Compass.
+	Device > MongoDB Compass
+
+		Important Note:
+			- Usage of MongoDB Compass and setup will be formally discussed during the S34 discussion.
+			- This is also done to ensure a fluid discussion for future sessions.
+			- You may refer to the slides provided in the S34 Discussion slides to find the step by step procedure to have this completed.
+			- Successfully running the application and connecting to both locally and to MongoDB Atlas will be sufficient for this.
+			- Refer to "references" section of this file to find the documentations for S34 Discussion Slides.
+
+========
+Activity
+========
+
+1. Provide the students with the link to the Google Form for them to complete and serve as the activity for this session.
+	Browser > Google Forms
+
+		Important Note:
+			- Refer to "references" section of this file to find the documentation for Google Forms Activity Link.

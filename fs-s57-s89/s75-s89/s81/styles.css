@@ -1,0 +1,187 @@
+/* Add any additional custom styling below */
+.nav-item a {
+    cursor: pointer;
+}
+
+/* Apply Google Fonts */
+body, button, input, select, textarea {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand, .nav-link {
+    font-family: 'Oswald', sans-serif;
+}
+
+/* Navbar Customization */
+.navbar {
+    background-color: #FFFFFF; /* White background for navbar */
+    box-shadow: 0 2px 4px rgba(0,0,0,.1); /* Adding a subtle shadow for depth */
+    border-bottom: 2px solid #007BFF; /* A blue border to subtly separate the navbar from the content */
+}
+
+.navbar-brand {
+    color: #007BFF !important; 
+}
+
+.nav-link {
+    color: #007BFF !important; /* Strong blue color for text, ensuring good contrast on white */
+}
+
+.nav-link:hover, .nav-link:focus {
+    color: #0056b3 !important; /* Slightly darker blue on hover/focus for distinction */
+    background-color: transparent; /* Keeping background transparent on hover/focus */
+}
+
+/* Active nav link */
+.nav-item.active .nav-link {
+    color: #28A745 !important; /* Strong green color for the active link */
+    font-weight: bold;
+}
+
+/* Adjustments for enhanced readability and thematic consistency */
+body, button, input, select, textarea {
+    font-family: 'Roboto', sans-serif;
+    color: #333333; /* Dark grey for text, enhancing readability */
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+    font-family: 'Oswald', sans-serif;
+    color: #007BFF; /* Using the theme's strong blue color for headings */
+}
+
+/* Enhancements for the Homepage */
+
+.jumbotron {
+    background-color: #e9faff; /* Light blue background for a softer look */
+    color: #007BFF; /* Keeping text color within the theme */
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Make card use available height */
+}
+
+.card-img-top {
+    height: 180px; /* Fixed height for images */
+    object-fit: cover; /* Cover the area without stretching the image */
+    width: 100%; /* Ensure the image covers the card width */
+}
+
+.card-title {
+    color: #0056b3; /* A theme-consistent color for card titles */
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space inside card body */
+}
+
+.btn-primary {
+    background-color: #007BFF;
+    border-color: #007BFF;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}
+
+/* Call to Action Section */
+.border-success {
+    border-color: #28A745 !important; /* Green border for emphasis */
+}
+
+.btn-success {
+    background-color: #28A745;
+    border-color: #28A745;
+}
+
+.btn-success:hover {
+    background-color: #1e7e34;
+    border-color: #1c7430;
+}
+
+.page-section {
+    padding: 2rem 0; /* Add padding for spacing around the section */
+}
+
+.page-section {
+    padding: 2rem 0;
+}
+
+.page-section {
+    padding: 3rem 0;
+}
+
+.list-group-item {
+    background-color: #e7f5ff; /* Light blue background */
+    border-radius: 0.5rem; /* Rounded corners for a softer look */
+    margin-bottom: 0.5rem; /* Space between list items */
+    border: none; /* Removes default border */
+    transition: background-color 0.2s ease-in-out; /* Smooth background transition */
+}
+
+.list-group-item:hover {
+    background-color: #d1e9ff; /* Darker shade on hover for feedback */
+}
+
+.btn-primary {
+    background-color: #28A745; /* Adjusts to theme's green for consistency */
+    border-color: #28A745; /* Ensures border matches the background */
+}
+
+.btn-primary:hover {
+    background-color: #1e7e34; /* Darker green on hover for visual feedback */
+    border-color: #1c7430;
+}
+
+.btn-sm {
+    padding: 0.25rem 0.5rem; /* Smaller padding for a compact look */
+    font-size: 0.875rem; /* Adjust font size for button text */
+}
+
+.page-section h1, .page-section h2 {
+    color: #007BFF; /* Theme's blue color for headings */
+}
+
+.map-container {
+    overflow: hidden;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    position: relative;
+    border-radius: 0.5rem; /* Rounded corners */
+}
+
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none; /* Removes the default border */
+}
+
+.btn-primary {
+    background-color: #28A745; /* Theme's green for primary buttons */
+    border-color: #28A745;
+}
+
+.btn-primary:hover {
+    background-color: #1e7e34;
+    border-color: #1c7430;
+}
+
+.btn-success {
+    background-color: #007BFF; /* Blue for success buttons, inverted from the primary */
+    border-color: #007BFF;
+}
+
+.btn-success:hover {
+    background-color: #0056b3;
+    border-color: #004095;
+}
+
+html {
+    scroll-behavior: smooth;
+}

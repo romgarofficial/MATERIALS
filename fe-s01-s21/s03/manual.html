@@ -1,0 +1,1008 @@
+<!-- 
+=================
+HTML Introduction
+=================
+-->
+
+<!-- 
+
+References:
+	Interneting Is Hard - Basic Web Pages
+		https://www.internetingishard.com/html-and-css/basic-web-pages/
+	HTML Blocks
+		https://www.tutorialspoint.com/html/html_blocks.htm
+		https://www.w3schools.com/html/html_blocks.asp
+	HTML Elements
+		https://developer.mozilla.org/en-US/docs/Glossary/Element
+	Hypertext
+		https://www.isko.org/cyclo/hypertext
+	block and inline elements
+		https://www.w3schools.com/html/html_blocks.asp
+	em tag vs i tag
+		https://developer.mozilla.org/en-US/docs/Web/HTML/Element/em
+	strong vs b tag
+		https://developer.mozilla.org/en-US/docs/Web/HTML/Element/strong
+
+Definition of terms:
+	Batch Folder - The batch folder that will store all files of the students throughout the bootcamp. Normally located in the "Documents" folder of the device.
+	Application - Root folder for the application
+
+-->
+
+<!-- 
+==========
+Discussion
+========== 
+-->
+
+<!-- 
+1. Create a "discussion" folder and an "index.html" file.
+	Batch Folder > individual > s03 > discussion >  index.html
+-->
+
+		<!-- Manual Code -->
+		<html>
+			<head>
+			    <title></title>
+			</head>
+			<body>
+
+			</body>
+		</html>
+
+		<!-- Sublime Text 3 Autocomplete -->
+		<!-- html + "Tab" key -->
+		<!DOCTYPE html>
+		<html>
+			<head>
+			    <meta charset="utf-8">
+			    <title></title>
+			</head>
+			<body>
+
+			</body>
+		</html>
+
+		<!-- 
+		Important Note:
+			- Demonstrate the use of HTML tags first by manually typing the code block. You may opt to show the students how to autocomplete HTML code. Though this is recommended towards the latter part of the discussion for better retainment of codes used in the discussion.
+			- If the code was generated using autocomplete, indent the contents of the html tag for code readability. This can be can be done using the following:
+				- Select the contents of the head tag by clicking and dragging to the closing body tag.
+				- Pressing on the "Tab" key to move the selected code block one indentation to the right.
+				- Pressing on the "Shift" key + "Tab" key will do the opposite.
+			- Make sure that the students save the file as a ".html" extension for the autocomplete feature of sublime text editor to work.
+			- If the file was not saved with the ".html" extension, you may rename the file and change the linting of the sublime text editor on the lower right hand side which contains the words "Plain Text" or "HTML". This is responsible for autocompletion of code based on the programming language selected. ".html" file extensions are normally opened with HTML and ".txt"/no file extensions are opened with "Plain Text".
+			- The "index.html" file is important because it serves as the entry point of the application. In most programming languages, the "index" file is the first file to be run by an application. This is also very important in the context of hosting an application in Git.
+			- "Hosting" refers to making our project available online and generating a live link that will serve as the "hosted/online" version of a project.
+		-->
+
+<!-- 
+2. Add the title of the page.
+	Application > index.html
+-->
+
+		<html>
+		    <head>
+		        <title>HTML Introduction</title>
+		    </head>
+		    <body>
+		    </body>
+		</html>
+
+		<!-- 
+			Important Note:
+				- <html> tag - tells the browser to read the contents of the file as HTML.
+				- <head> tag - contains the details of the HTML file not visible in the browser.
+				- <title> tag - sets the title of the tab shown in the browser.
+				- <body> tag - contains the actual content of the HTML file that are visible to the browser.
+				- HTML normally come in pairs and are called "paired tags". The opening and the closing tags.
+				- For every change in the file, show the students the changes by opening the "index.html" file in the browser.
+				- Opening the file in the browser can be done using the following:
+					- File Explorer > Right click + index.html > Open with Other Application > Google Chrome
+					- File Explorer + Double click + index.html
+					- Sublime Text Editor > index.html + Right click > Open in Browser
+		-->
+
+<!-- 
+3. Add a comment.
+	Application > index.html
+-->
+
+		<html>
+		    <head>
+		    	<!-- Changes the title of the page -->
+		        <title>HTML Introduction</title>
+		    </head>
+		    <body>
+		    </body>
+		</html>
+	
+		<!-- 
+		Important Note:
+			- Comments are useful for proper documentation and allows us developers to understand written code better.
+			- These are ignored by the browser and do not show as text.
+			- Comments may be done using the following:
+				Linux and Windows = Click on the line of code to be commented out + ctrl + / (forward slash)
+				Mac = Click on the line of code to be commented out + cmd + / (forward slash)
+			- For code blocks, you can highlight portions of the code by holding the left click and dragging to sections to be commented.
+			- Make sure that the file has been saved for the changes to be applied to the output.
+			- A saved file will have an "x" symbol on the right side of the file name in the tabs located at the top of the sublime text editor if it is saved. 
+			- A "circle" symbol will show instead if there are unsaved changes to a file.
+			- Saving the file can be done using the following:
+				- File > Save
+				- Linux and Windows = ctrl + s
+				- Mac = cmd + s
+			- For any succeeding changes to the file and if it's already opened in a browser, showing the changes can be done using the following:
+				- Browser > index.html > Click on the URL/Link + "Enter" key
+				- Browser + F5 
+		-->
+			
+<!-- 
+4. Add a header tag.
+	Application > index.html 
+-->
+
+		<html>
+		    <!-- ... -->
+		    <body>
+
+		    	<!-- Creates a heading text -->
+		        <h1>Zuitt Coding Bootcamp</h1>
+		    </body>
+		</html>
+
+		<!-- 
+		Important Note:
+			- <h1> tag - Creates a heading text element that's larger in size and is had a bolder text. Header tags create block elements. This can be proven because the text occupies the full width of the page/container. HTML elements added after this tag will show below it and not beside the element.
+			- Refer to "references" section of this file to find the documentation for a list of block and inline elements.
+			- HTML tags are the code we use to generate elements. Elements are the items that we see in the browser.
+		-->
+
+<!-- 
+4. Add another header tag.
+	Application > index.html
+-->
+		<html>
+		    <!-- ... -->
+		    <body>
+
+		    	<!-- ... -->
+		        <h1>Zuitt Coding Bootcamp</h1>
+
+		        <!-- Creates a smaller heading text -->
+		        <h3>John Doe</h3>
+		    </body>
+		</html>
+
+<!-- 
+5. Create a hr tag.
+	Application > index.html
+-->
+
+		<html>
+		    <!-- ... -->
+		    <body>
+
+		    	<!-- ... -->
+		        <h3>John Doe</h3>
+
+		        <!-- Creates a horizontal rule -->
+		        <hr>
+		    </body>
+		</html>
+
+		<!-- 
+		Important Note:
+			- <hr> tag - Creates a horizontal rule element. hr tags create block elements.
+			- hr tags are "single" tags also called as "self closing" tags.
+		-->
+
+<!-- 
+6. Add a paragraph tag.
+	Application > index.html
+-->
+
+		<html>
+		    <!-- ... -->
+		    <body>
+
+		        <!-- ... -->
+		        <hr>
+
+		        <!-- Creates a paragraph text -->
+		        <!-- Introductory paragraph -->
+		        <p>Welcome to Zuitt! In this online bootcamp course, you will learn a lot of things. Let's enumerate all the things that will make you a full-stack web developer.</p>
+		    </body>
+		</html>
+
+		<!-- 
+		Important Note:
+			- <p> tag - creates paragraph elements. Paragraph tags create block elements.
+			- If the text/code line exceeds the width of the editor and creates a horizontal scrolling at the bottom, you may set the sublime text editor to use word wrapping.
+				- View > Word Wrap
+		-->
+
+<!-- 
+7. Add an emphasis tag.
+	Application > index.html
+-->
+
+		<html>
+		    <!-- ... -->
+		    <body>
+
+		        <!-- ... -->
+		        <!-- Introductory paragraph -->
+		        <!-- em creates emphasis on text -->
+		        <p>Welcome to <em>Zuitt</em>! In this online bootcamp course, you will learn a lot of things. Let's enumerate all the things that will make you a full-stack web developer.</p>
+		    </body>
+		</html>
+
+		<!-- 
+		Important Note:
+			- <em> tag - changes the style of a text into italics for emphasis. em tags create inline elements. This can be proven because the text appears inside of the paragraph element.
+			- <i> tag - functions in the same manner but the usage for each element is different.
+			- Refer to "references" section of this file to find the documentation on the differences for each element. Not recommended to be discussed due to the concept of semantic HTML tags.
+		-->
+
+<!-- 
+8. Add a strong tag.
+	Application > index.html
+-->
+
+		<html>
+		    <!-- ... -->
+		    <body>
+
+		        <!-- ... -->
+		        <!-- em creates emphasis on text -->
+		        <!-- strong creates importance on text -->
+		        <p>Welcome to <em>Zuitt</em>! In this online bootcamp course, you will learn a lot of things. Let's enumerate all the things that will make you a <strong>full-stack web developer</strong>.</p>
+		    </body>
+		</html>
+
+		<!-- 
+		Important Note:
+			- <strong> tag - changes the style of a text into bold for importance. strong tags create inline elements.
+			- <b> tag - functions in the same manner but the usage for each element is different.
+			- Refer to "references" section of this file to find the documentation on the differences for each element. Not recommended to be discussed due to the concept of semantic HTML tags.
+		-->
+
+<!-- 
+9. Add a br tag.
+	Application > index.html
+-->
+
+		<html>
+		    <!-- ... -->
+		    <body>
+
+		        <!-- ... -->
+		        <!-- strong creates importance on text -->
+		        <!-- br creates a line break in between text -->
+		        <p>
+		        	Welcome to <em>Zuitt</em>!
+		        	<br>
+		        	In this online bootcamp course, you will learn a lot of things. Let's enumerate all the things that will make you a <strong>full-stack web developer</strong>.
+		       	</p>
+		    </body>
+		</html>
+
+		<!-- 
+		Important Note:
+			- <br> tag - produces a line break in text.
+			- br tags are not meant to be used for manipulating the style and layout of a page. This is added in the discussion to show awareness to the students that this tag exists.
+			- Inform the students that "paired" tags don't necesarily have to be in the same line to work. Using this format when adding HTML tags fosters code readability.
+		-->
+
+<!-- 
+9. Add an unordered list.
+	Application > index.html
+-->
+
+		<html>
+		    <!-- ... -->
+		    <body>
+
+		        <!-- ... -->
+		        <p>
+		         	<!-- ... -->
+		        </p>
+
+		        <!-- Creates an unordered list with bullet points -->
+		        <ul>
+		        	<!-- Creates a list item -->
+		            <li>Languages</li>
+		            <li>Frameworks & Libraries</li>
+		            <li>Tools</li>
+		        </ul>
+		    </body>
+		</html>
+
+		<!-- 
+		Important Note:
+			- <ul> tag - creates a bulleted list of elements. Unordered list tags create block elements.
+			- <li> tag - creates list item elements for the specified list. Used together with the <ul> or <ol> tags.
+		-->
+
+<!-- 
+10. Add an unordered nested list.
+	Application > index.html
+-->
+
+		<html>
+		    <!-- ... -->
+		    <body>
+
+		        <!-- ... -->
+		        <ul>
+		        	<!-- ... -->
+		            <li>Languages</li>
+	            	<ul>
+    	                <li>HTML</li>
+    	                <li>CSS</li>
+    	                <li>JavaScript</li>
+    	            </ul>
+		            <li>Frameworks & Libraries</li>
+		            <!-- ... -->
+		        </ul>
+		    </body>
+		</html>
+
+	    <!-- 
+		Important Note:
+			- HTML elements may be "nested" or put inside of other HTML tags.
+		-->
+
+<!-- 
+11. Add an ordered nested list.
+	Application > index.html
+-->
+
+		<html>
+		    <!-- ... -->
+		    <body>
+
+		        <!-- ... -->
+		        <ul>
+		        	<!-- ... -->
+		            <li>Frameworks & Libraries</li>
+		            <!-- Creates an ordered list with numbered points -->
+		            <ol>
+	                    <li>Bootstrap</li>
+	                    <li>Express.js</li>
+	                    <li>React.js</li>
+	                </ol>
+		            <li>Tools</li>
+		        </ul>
+		    </body>
+		</html>
+
+	    <!-- 
+	    Important Note:
+	    	- <ol> tag - creates a numbered list of elements. Ordered list tags create block elements.
+	    -->
+
+<!-- 
+12. Add another ordered nested list.
+	Application > index.html
+-->
+
+		<html>
+		    <!-- ... -->
+		    <body>
+
+		        <!-- ... -->
+		        <ul>
+		        	<!-- ... -->
+		            <li>Tools</li>
+		            <ol>
+                        <li>Git</li>
+                        <li>GitLab</li>
+                        <li>Sublime Text 3</li>
+                        <li>Postman</li>
+                        <li>Others</li>
+                    </ol>
+		        </ul>
+		    </body>
+		</html>
+
+<!-- 
+13. Add another unordered nested list.
+	Application > index.html
+-->
+	
+		<html>
+		    <!-- ... -->
+		    <body>
+
+		        <!-- ... -->
+		        <ul>
+		        	<!-- ... -->
+		            <li>Tools</li>
+		            <ol>
+                        <!-- ... -->
+                        <li>Others</li>
+                        <ul>
+                            <li>MongoDB</li>
+                            <li>Robo3T</li>
+                        </ul>
+                    </ol>
+		        </ul>
+		    </body>
+		</html>
+
+		<!-- 
+		Important Note:
+			- HTML elements may be "nested" as needed.
+		-->	            
+
+<!-- 
+14. Add another paragraph tag.
+	Application > index.html
+-->
+
+		<html>
+		    <!-- ... -->
+		    <body>
+
+		        <!-- ... -->
+		        <ul>
+		        	<!-- ... -->
+		        </ul>
+
+		        <!-- Closing paragraph -->
+		        <p>There is a lot to learn in this bootcamp. It may look overwhelming at the beginning, but it's all worth it when you graduate!</p>
+
+		    </body>
+		</html>
+
+<!--
+=====================
+Activity Instructions
+=====================
+-->
+
+<!--
+1. In the s03 folder, Create an activity folder and an activity-a.html file inside of it.
+2. Mimic the contents of the document Software Engineering Code of Ethics and Professional Practice.
+3. Create another file named activity-b.html file inside of the activity folder.
+4. Mimic the contents of the document Code of Ethics of the Filipino Computing.
+5. Update your local individual git repository and push to git with the commit message of Add activity code s03.
+6. Add the link in Boodle for s03.
+
+Stretch Goals:
+1. In the activity folder, create an activity-c.html file inside of it.
+2. Add your profile information.
+	- Add an image of yourself - [Research the img element]
+	- Using headings add your name and title as “Web Developer”
+	- Using a paragraph element add a short description about yourself.
+-->
+
+<!-- 
+==========
+Activity A
+==========
+-->
+
+<!-- 
+1. Create an "activity" folder and an "activity-a.html" file.
+	Batch Folder > Session Folder > activity > activity-a.html
+-->
+
+		<html>
+			<head>
+			    <title>SE Code of Ethics</title>
+			</head>
+			<body>
+
+			</body>
+		</html>
+
+<!-- 
+2. Add an em tag.
+	Application > activity-a.html
+-->
+
+		<html>
+		    <!-- ... -->
+			<body>
+
+				<em>Science and Engineering Ethics (2001) 7, 231-238</em>
+
+			</body>
+		</html>
+
+<!--
+3. Add a hr tag.
+	Application > activity-a.html
+-->
+
+		<html>
+			<!-- ... -->
+			<body>
+
+				<em>Science and Engineering Ethics (2001) 7, 231-238</em>
+
+				<hr>
+			</body>
+		</html>
+
+<!--
+4. Add header tags.
+	Application > activity-a.html
+-->
+
+		<html>
+			<!-- ... -->
+			<body>
+
+				<!-- ... -->
+
+				<hr>
+
+				<h1>Software Engineering Code of Ethics and Professional Practice</h1>
+		        <h3>IEEE-CS/ACM Joint Task Force on Software Engineering Ethics and Professional Practices</h3>
+			</body>
+		</html>
+
+<!--
+5. Add another hr tag.
+	Application > activity-a.html
+-->
+
+		<html>
+			<!-- ... -->
+			<body>
+
+				<!-- ... -->
+		        <h3>IEEE-CS/ACM Joint Task Force on Software Engineering Ethics and Professional Practices</h3>
+
+		        <hr>
+			</body>
+		</html>
+
+<!--
+6. Add a paragraph tag and a strong tag to show imporance on the word "Keywords".
+	Application > activity-a.html
+-->
+
+		<html>
+			<!-- ... -->
+			<body>
+
+				<!-- ... -->
+
+		        <hr>
+
+		        <p>
+		            <strong>Keywords</strong>: code of ethics, professional responsibility, software engineering
+		        </p>
+			</body>
+		</html>
+
+<!--
+7. Add another header tag.
+	Application > activity-a.html
+-->
+
+		<html>
+			<!-- ... -->
+			<body>
+
+				<!-- ... -->
+
+		        <p>
+		            <strong>Keywords</strong>: code of ethics, professional responsibility, software engineering
+		        </p>
+
+		        <h4>PREAMBLE</h4>
+			</body>
+		</html>
+
+<!--
+8. Add several paragraph tags.
+	Application > activity-a.html
+-->
+
+		<html>
+			<!-- ... -->
+			<body>
+
+				<!-- ... -->
+
+		        <h4>PREAMBLE</h4>
+
+		        <p>
+		            The short version of the code summarizes aspirations at a high level of abstraction. The
+		            clauses that are included in the full version give examples and details of how these
+		            aspirations change the way we act as software engineering professionals. Without the
+		            aspirations, the details can become legalistic and tedious; without the details, the
+		            aspirations can become high-sounding but empty; together, the aspirations and the
+		            details form a cohesive code.
+		        </p>
+
+		        <p>
+		            Software engineers shall commit themselves to making the analysis, specification,
+		            design, development, testing, and maintenance of software a beneficial and respected
+		            profession. In accordance with their commitment to the health, safety, and welfare of
+		            the public, software engineers shall adhere to the following eight Principles:
+		        </p>
+			</body>
+		</html>
+
+<!--
+9. Add another header tag.
+	Application > activity-a.html
+-->
+
+		<html>
+			<!-- ... -->
+			<body>
+
+				<!-- ... -->
+
+		        <p>
+		            Software engineers shall commit themselves to making the analysis, specification,
+		            design, development, testing, and maintenance of software a beneficial and respected
+		            profession. In accordance with their commitment to the health, safety, and welfare of
+		            the public, software engineers shall adhere to the following eight Principles:
+		        </p>
+
+		        <h4>PRINCIPLES</h4>
+			</body>
+		</html>
+
+<!-- 
+10. Add an ordered list.
+	Application > activity-a.html
+-->
+
+		<html>
+			<!-- ... -->
+			<body>
+
+				<!-- ... -->
+
+		        <h4>PRINCIPLES</h4>
+
+		        <ol>
+		            <li>
+		                Public. Software engineers shall act consistently with the public interest.
+		            </li>
+		            <li>
+		                Client and employer. Software engineers shall act in a manner that is in the best interests of their client and employer, consistent with the public interest.
+		            </li>
+		            <li>
+		                Product. Software engineers shall ensure that their products and related modifications meet the highest professional standards possible.
+		            </li>
+		            <li>
+		                Judgment. Software engineers shall maintain integrity and independence in their professional judgment.
+		            </li>
+		            <li>
+		                Management. Software engineering managers and leaders shall subscribe to and promote an ethical approach to the management of software development and maintenance.
+		            </li>
+		            <li>
+		                Profession. Software engineers shall advance the integrity and reputation of theprofession consistent with the public interest.
+		            </li>
+		            <li>
+		                Colleagues. Software engineers shall be fair to and supportive of their colleagues.
+		            </li>
+		            <li>
+		                Self. Software engineers shall participate in lifelong learning regarding the practice of their profession and shall promote an ethical approach to the practice of the profession.
+		            </li>
+		        </ol>
+			</body>
+		</html>
+
+<!-- 
+11. Add em tags.
+	Application > activity-a.html
+-->
+
+		<html>
+			<!-- ... -->
+			<body>
+
+				<!-- ... -->
+
+		        <ol>
+		            <li>
+		                <em>Public</em>. Software engineers shall act consistently with the public interest.
+		            </li>
+		            <li>
+		                <em>Client and employer</em>. Software engineers shall act in a manner that is in the best interests of their client and employer, consistent with the public interest.
+		            </li>
+		            <li>
+		                <em>Product</em>. Software engineers shall ensure that their products and related modifications meet the highest professional standards possible.
+		            </li>
+		            <li>
+		                <em>Judgment</em>. Software engineers shall maintain integrity and independence in their professional judgment.
+		            </li>
+		            <li>
+		                <em>Management</em>. Software engineering managers and leaders shall subscribe to and promote an ethical approach to the management of software development and maintenance.
+		            </li>
+		            <li>
+		                <em>Profession</em>. Software engineers shall advance the integrity and reputation of theprofession consistent with the public interest.
+		            </li>
+		            <li>
+		                <em>Colleagues</em>. Software engineers shall be fair to and supportive of their colleagues.
+		            </li>
+		            <li>
+		                <em>Self</em>. Software engineers shall participate in lifelong learning regarding the practice of their profession and shall promote an ethical approach to the practice of the profession.
+		            </li>
+		        </ol>
+
+			</body>
+		</html>
+
+<!-- 
+==========
+Activity B
+==========
+-->
+
+<!-- 
+1. Create an "activity-b.html" file.
+	Application > activity-b.html
+-->
+
+		<html>
+			<head>
+			    <title>IT Code of Ethics</title>
+			</head>
+			<body>
+
+			</body>
+		</html>
+
+<!-- 
+2. Add a header tag.
+	Application > activity-b.html
+-->
+
+		<html>
+			<!-- ... -->
+			<body>
+
+				<h1>Code of Ethics of the Filipino Computing and Information Technology Professional</h1>
+
+			</body>
+		</html>
+
+<!-- 
+3. Add several paragraph tags.
+	Application > activity-b.html
+-->
+
+		<html>
+			<!-- ... -->
+			<body>
+
+				<h1>Code of Ethics of the Filipino Computing and Information Technology Professional</h1>
+
+				<p>
+				    Information Technology
+				</p>
+
+				<p>
+				    The preparation, collection, creation, transport, retrieval, storage, access, 
+				    presentation and transformation of electronic information in all its forms including, 
+				    but not limited to, voice, graphics, text, video, data and image.
+				</p>
+
+				<p>
+				    Information Technology Professional
+				</p>
+
+				<p>
+				    One who develops or provides information technology products and/or services 
+				    to the public.
+				</p>
+			</body>
+		</html>
+
+<!-- 
+4. Add strong tags to show imporance on the words "Information Technology" and "Information Technology Professional".
+	Application > activity-b.html
+-->
+
+		<html>
+			<!-- ... -->
+			<body>
+
+				<!-- ... -->
+
+				<p>
+				    <strong>Information Technology</strong>
+				</p>
+
+				<!-- ... -->
+
+				<p>
+				    <strong>Information Technology Professional</strong>
+				</p>
+
+				<!-- ... -->
+			</body>
+		</html>
+
+<!-- 
+5. Add another header tag.
+	Application > activity-b.html
+-->
+
+		<html>
+			<!-- ... -->
+			<body>
+
+				<!-- ... -->
+
+				<p>
+				    One who develops or provides information technology products and/or services 
+				    to the public.
+				</p>
+
+				<h2>Preamble</h2>
+			</body>
+		</html>
+
+<!-- 
+5. Add another paragraph tag.
+	Application > activity-b.html
+-->
+
+		<html>
+			<!-- ... -->
+			<body>
+
+				<!-- ... -->
+
+				<h2>Preamble</h2>
+
+				<p>
+				    I will use my special knowledge and skills for the benefit of the public. I will serve 
+				    employers and clients with integrity, subject to an overriding responsibility to the 
+				    public interest, and I will strive to enhance the competence and prestige of the 
+				    professional. By these, I mean:
+				</p>
+			</body>
+		</html>
+
+<!-- 
+6. Add an unordered list.
+	Application > activity-b.html
+-->
+
+		<html>
+			<!-- ... -->
+			<body>
+
+				<!-- ... -->
+
+				<p>
+				    I will use my special knowledge and skills for the benefit of the public. I will serve 
+				    employers and clients with integrity, subject to an overriding responsibility to the 
+				    public interest, and I will strive to enhance the competence and prestige of the 
+				    professional. By these, I mean:
+				</p>
+
+				<ul>
+				    <li>
+				        I will promote public knowledge, understanding and appreciation of information technology;
+				    </li>
+				    <li>
+				        I will consider the general welfare and public good in the performance of my work;
+				    </li>
+				    <li>
+				        I will advertise goods or professional services in a clear and truthful manner;
+				    </li>
+				    <li>
+				        I will comply and strictly abide by the intellectual property laws, patent laws and other 
+				        related laws in respect of information technology;
+				    </li>
+				    <li>
+				        I will accept full responsibility for the work undertaken and will utilize my skills 
+				        with competence and professionalism;
+				    </li>
+				    <li>
+				        I will make truthful statements on my areas of competence as well as the 
+				        capabilities and qualities of my products and services;
+				    </li>
+				    <li>
+				        I will not disclose or use any confidential information obtained in the course of 
+				        professional duties without the consent of the parties concerned, except when required by law;
+				    </li>
+				    <li>
+				        I will try to attain the highest quality in both the products and services I offer;
+				    </li>
+				    <li>
+				        I will not knowingly participate in the development of Information Technology Systems 
+				        that will promote the commission of fraud and other unlawful acts;
+				    </li>
+				    <li>
+				        I will uphold and improve the IT professional standards through continuing 
+				        professional development in order to enhance the IT profession.
+				    </li>
+				</ul>
+			</body>
+		</html>
+
+<!-- 
+7. Add strong tags.
+	Application > activity-b.html
+-->
+
+		<html>
+			<!-- ... -->
+			<body>
+				
+				<!-- ... -->
+
+				<ul>
+		            <li>
+		                I will <strong>promote public knowledge, understanding and appreciation</strong> of information technology;
+		            </li>
+		            <li>
+		                I will <strong>consider the general welfare and public good</strong> in the performance of my work;
+		            </li>
+		            <li>
+		                I will advertise goods or professional services in a <strong>clear and truthful manner</strong>;
+		            </li>
+		            <li>
+		                I will <strong>comply and strictly abide by the intellectual property laws, patent laws and other 
+		                related laws</strong> in respect of information technology;
+		            </li>
+		            <li>
+		                I will <strong>accept full responsibility for the work undertaken</strong> and will utilize my skills 
+		                with <strong>competence and professionalism</strong>;
+		            </li>
+		            <li>
+		                I will make <strong>truthful statements</strong> on my areas of competence as well as the 
+		                capabilities and qualities of my products and services;
+		            </li>
+		            <li>
+		                I will not <strong>disclose or use any confidential information obtained</strong> in the course of 
+		                professional duties <strong>without the consent of the parties</strong> concerned, <strong>except when required by law</strong>;
+		            </li>
+		            <li>
+		                I will <strong>try to attain the highest quality</strong> in both the products and services I offer;
+		            </li>
+		            <li>
+		                I will <strong>not knowingly participate</strong> in the development of Information Technology Systems 
+		                that will promote the <strong>commission of fraud and other unlawful acts</strong>;
+		            </li>
+		            <li>
+		                I will <strong>uphold and improve</strong> the IT professional standards through <strong>continuing 
+		                professional development</strong> in order to enhance the IT profession.
+		            </li>
+		        </ul>
+
+			</body>
+		</html>
+
+<!-- 
+8. Create a git repository named "S03".
+	Browser > Zuitt Git
+-->
+
+		Important Note:
+			- Have the students create a new repository inside their Batch Organization
+
+<!--
+9. Initialize a local git repository, add the remote link and push to git.
+	Application > Terminal
+-->
+
+		git init
+		git remote add origin [remote-repository-link]
+		git add .
+		git commit -m "Add activity code"
+		git push origin master
+
+<!-- 
+10. Add the link in Boodle.
+	Browser > Boodle
+-->
+
+		 https://boodle.zuitt.co/login/

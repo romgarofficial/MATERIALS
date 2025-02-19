@@ -1,0 +1,23 @@
+{
+  "name": "s27",
+  "version": "1.0.0",
+  "description": "* What is an API?\r * What is REST?\r * Postman API Client",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://ben.cavas:15zPzhxxotnADjfioHJZ@gitlab.com/zuitt-coding-bootcamp-curricula/courses/wdc028v1.5/s27.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/zuitt-coding-bootcamp-curricula/courses/wdc028v1.5/s27/issues"
+  },
+  "homepage": "https://gitlab.com/zuitt-coding-bootcamp-curricula/courses/wdc028v1.5/s27#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

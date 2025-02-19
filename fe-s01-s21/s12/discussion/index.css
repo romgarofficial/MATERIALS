@@ -1,0 +1,229 @@
+
+/*==========display properties==========*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h2,h3,h4 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+#div-1 {
+    background-color: green;
+    border: 2px solid black;
+}
+
+#div-2 {
+    background-color: red;
+    border: 2px solid black;
+    height: 200px;
+    width: 200px;
+}
+
+#span-1 {
+    background-color: lightyellow;
+    /* adding width and height on inline elements does not work. */
+    /* Inline elements base their size on its content. */
+    width: 200px;
+    height: 200px;
+    /* adding margins at the top and bottom of inline elements does not work. */
+    margin-top: 30px;
+    margin-bottom: 30px;
+    /* adding paddings at the top and bottom of inline elements works but with some caveats. It overlaps. */
+    /* padding-top: 20px;
+    padding-bottom: 20px; */
+    /* adding margins and paddings at the left and right of inline elements works. */
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 2px solid black;
+}
+
+#span-2 {
+    background-color: lightcoral;
+    border: 2px solid black;
+}
+
+#div-3 {
+    background-color: skyblue;
+    border: 2px solid black;
+    height: 200px;
+    width: 200px;
+    display: inline;
+}
+
+#div-4 {
+    background-color: aquamarine;
+    border: 2px solid black;
+    height: 200px;
+    width: 200px;
+    display: inline;
+}
+
+#span-3 {
+    background-color: gray;
+    border: 2px solid black;
+    display: block;
+    height: 200px;
+    width: 200px;
+}
+
+#span-4 {
+    background-color: brown;
+    border: 2px solid black;
+    display: block;
+    height: 200px;
+    width: 200px;
+}
+
+
+/* optional Samples */
+/* #anchorSample {
+    background-color: cornflowerblue;
+    border: 2px solid black;
+    display:block;
+}
+
+#headingSample {
+    background-color: darkseagreen;
+    border: 2px solid black;
+    display: inline;
+} */
+
+#span-5 {
+    background-color: yellow;
+    border: 2px solid black;
+    display: inline-block;
+    height: 300px;
+    width: 300px;
+}
+
+#span-6 {
+    background-color: orange;
+    border: 2px solid black;
+    display: inline-block;
+    height: 300px;
+    width: 300px;
+}
+
+#div-5 {
+    background-color: pink;
+    border: 2px solid black;
+    display: inline-block;
+    height: 300px;
+    width: 300px;
+}
+
+#div-6 {
+    background-color: violet;
+    border: 2px solid black;
+    display: inline-block;
+    height: 300px;
+    width: 300px;
+}
+
+#div-7 {
+    background-color: aquamarine;
+    border: 2px solid black;
+}
+
+#div-8 {
+    background-color: lightcyan;
+    border: 2px solid black;
+    display: none;
+}
+
+#span-7 {
+    background-color: lightgreen;
+    border: 2px solid black;
+    display: none;
+}
+
+/*==========Float property==========*/
+
+.img-float {
+    width: 250px;
+    height: 250px;
+    float: inherit;
+}
+
+/*==========CSS Units==========*/
+.box {
+    background-color: red;
+    border: 1px solid black;
+    margin: 5px;
+}
+
+.fifty-percent {
+    width:  50%;
+}
+
+.one-hundred-pixels {
+    width:  100px;
+}
+
+.parent {
+    width: 135px;
+    border: 2px solid navy;
+
+    font-size: 30px;
+}
+
+.fifty-vw {
+    width: 50vw;
+}
+
+.twenty-five-vh {
+    height: 50vh;
+}
+
+
+.one-rem {
+    font-size: 1rem;
+}
+
+.one-em {
+    font-size: 1em;
+}
+
+.two-rem {
+    font-size: 2rem;
+}
+
+.two-em {
+    font-size: 2em;
+}
+
+.two-hundred-percent {
+    font-size: 200%;
+}
+
+
+/*==========CSS Background Properties==========*/
+.background {
+    min-height: 100vh;
+    /*background-color: gray;*/
+    background-image: url(https://c4.wallpaperflare.com/wallpaper/43/1003/707/anime-your-name-kimi-no-na-wa-mitsuha-miyamizu-wallpaper-preview.jpg);
+    background-repeat : no-repeat;
+    background-size: 100%;
+    background-position: center top;
+    background-attachment: scroll;
+
+}
+
+.container-bg {
+    background-color: rgba(0, 0, 0, 0.5);
+    min-height: 100vh;
+}
+
+.bg-title{
+    color: white;
+    text-align: center;
+    font-size: 5em;
+    margin: 0;
+    line-height: 35rem;
+
+}

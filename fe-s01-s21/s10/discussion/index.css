@@ -1,0 +1,103 @@
+/*
+CSS Rules
+selector {
+    property: value;
+}
+*/
+
+/*h1 { color: yellow; }*/
+
+/*Universal Selector*/
+* {
+    font-family: "Courier New", monospace;
+    font-size: 20px;
+}
+
+body {
+    background-color: skyblue;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*Navigation Bar*/
+nav {
+    background-color: white;
+}
+
+div {
+    float: right;
+}
+
+/*Type Selector*/
+/*tag-name*/
+h1 {
+    color: yellow !important;
+    text-align: center;
+    font-size: 2rem;
+}
+
+/*landing section*/
+section {
+    height: 100vh;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+/*ID Selector*/
+/*#id-name*/
+#zuitt-motto {
+    letter-spacing: 5px;
+}
+
+h3 {
+    letter-spacing: 25px;
+}
+
+.modules {
+    letter-spacing: 3px;
+}
+
+
+/*Adjacent Sibling Selector*/
+/*selector + selector*/
+h3 + img {
+    height: 300px;
+    width: 300px;
+    border-radius: 150px;
+}
+
+/*
+#zuitt-moto + img {
+    height: 300px;
+    width: 300px;
+    border-radius: 150px;
+}
+*/
+
+ol {
+    list-style-type: none;
+    padding: 0;
+}
+
+/*Class Selector*/
+/*.class-name*/
+.offering-item {
+    text-transform: uppercase;
+}
+
+/*Descendant Selector*/
+/*selector selector*/
+#bootcamp-learning-list li {
+    color: #075966;
+}
+
+/*General Sibling Selector*/
+/*selector ~ selector*/
+h2 ~ a, a {
+    text-decoration: none;
+}

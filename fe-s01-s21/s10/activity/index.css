@@ -1,0 +1,55 @@
+/*CSS Specificity Rule*/
+#external {
+    color: yellow;
+}
+
+/*CSS Selectors*/
+/*Universal Selector*/
+* {
+    font-family: 'Verdana', sans-serif;
+    font-size: 20px;
+}
+
+/*Type Selector*/
+h1 {
+    font-size: 3rem;
+}
+
+/*ID Selector*/
+#sub-header {
+    text-transform: uppercase;
+}
+
+/*Class Selector*/
+.text-green {
+    background-color: green;
+}
+
+/*Attribute Selector*/
+li[class="border-blue"] {
+    border: 2px solid blue;
+}
+
+/*CSS Combinator Selectors*/
+
+/*Descendant Selector*/
+section img {
+    height: 20vh;
+    width: 20vh;
+    border-radius: 100px;
+}
+
+/*Generic Sibling Selector*/
+ul ~ p {
+    text-align: center;
+}
+
+/*Adjacent Sibling Selector*/
+img + ul {
+    list-style-type: none;
+}
+
+/*Child Selector*/
+section > ul > li {
+    letter-spacing: 10px;
+}

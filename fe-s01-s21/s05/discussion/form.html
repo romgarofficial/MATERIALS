@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>HTML Forms</title>
+    </head>
+    <body>
+
+        <h2>HTML Forms</h2>
+        <p><em>Input elements that make up a form.</em></p>
+
+        <!-- Creates an HTML form to capture user input -->
+        <form action="https://google.com">
+
+            <!-- Creates a label and allows for input field selection when clicked -->
+            <label for="full_name">Full Name:</label><br>
+            <!-- Creates an input field to capture user input -->
+            <input type="text" name="full_name" id="full_name" required autocomplete><br>
+
+            <label for="birth_date">Birth Date:</label><br>
+            <input type="date" name="birth_date" id="birth_date" required><br>
+
+            <label for="age">Age:</label><br>
+            <input type="number" name="age" id="age" required><br>
+
+            <label for="gender">Gender:</label><br>
+            <!-- Creates a dropdown menu -->
+            <select name="gender" id="gender">
+                <!-- Creates an option for the dropdown -->
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select><br>
+
+            <label for="notes">Notes:</label><br>
+            <!-- Creates a larger text input -->
+            <textarea name="notes" rows="5" id="notes"></textarea><br>
+
+            <!-- Radio Buttons -->
+            <label>New User:</label><br>
+
+            <!-- name attribute should be the same for related radio buttons -->
+            <input type="radio" name="new_user" id="user-type1" value="yes">
+            <label for="user-type1">Yes</label><br>
+
+            <input type="radio" name="new_user" id="user-type2" value="no">
+            <label for="user-type2">No</label>
+
+            <br><br>
+
+            <!-- Checkboxes -->
+            <label>Role:</label><br>
+
+            <!-- Creates checkboxes for multiple choices -->
+            <input type="checkbox" name="role1" id="role1" value="developer">
+            <label for="role1">Developer</label><br>
+
+            <input type="checkbox" name="role2" id="role2" value="student">
+            <label for="role2">Student</label><br>
+
+            <input type="checkbox" name="role3" id="role3" value="manager">
+            <label for="role3">Manager</label>
+
+            <br><br>
+
+            <!-- Creates a button that will submit the form data -->
+            <button type="submit">Submit</button><br>
+            <!-- Creates a button to reset the form data -->
+            <button type="reset">Reset</button>
+
+        </form>
+        
+    </body>
+</html>

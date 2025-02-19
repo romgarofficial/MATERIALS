@@ -1,0 +1,524 @@
+==========
+Git Basics
+==========
+
+References:
+	About Version Control
+		https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control
+	A Visual Guide to Version Control
+		https://betterexplained.com/articles/a-visual-guide-to-version-control/
+	A Visual Git Reference
+		https://marklodato.github.io/visual-git-guide/index-en.html
+	How to Write a Git Commit Message
+		https://chris.beams.io/posts/git-commit
+	Setting Up SSH Keys
+		https://docs.google.com/presentation/d/1E4tBBwg5wla0u8sZEQhKNc3bKkXFWgLAHAD0MdF0e_I/edit#slide=id.gbf0b886339_0_2590
+	Show hidden files and folders:
+		Linux
+			https://devconnected.com/how-to-show-hidden-files-on-linux/
+		Mac
+			https://www.macworld.co.uk/how-to/show-hidden-files-mac-3520878/#:~:text=How%20to%20see%20hidden%20files%20in%20macOS,folders%20just%20press%20Command%20%2B%20Shift%20%2B
+		Windows
+			https://support.microsoft.com/en-us/windows/view-hidden-files-and-folders-in-windows-10-97fbc472-c603-9d90-91d0-1166d1d9f4b5
+	Git Init
+		https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-init#:~:text=The%20git%20init%20command%20creates,run%20in%20a%20new%20project.
+	Git Remote
+		https://www.atlassian.com/git/tutorials/syncing
+	Git Add
+		https://www.atlassian.com/git/tutorials/saving-changes
+	Git Commit
+		https://www.atlassian.com/git/tutorials/saving-changes/git-commit
+	Git Push
+		https://www.atlassian.com/git/tutorials/syncing/git-push
+	Git Clone
+		https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-clone#:~:text=git%20clone%20is%20primarily%20used,copies%20an%20existing%20Git%20repository.
+	Git Pull
+		https://www.atlassian.com/git/tutorials/syncing/git-pull#:~:text=The%20git%20pull%20command%20is,Git%2Dbased%20collaboration%20work%20flows.
+	Git Branch
+		https://www.atlassian.com/git/tutorials/using-branches#:~:text=The%20git%20branch%20command%20lets,checkout%20and%20git%20merge%20commands.
+	Interactive Git Branching
+		https://learngitbranching.js.org/
+
+Definition of terms:
+	Batch Folder - The batch folder that will store all files of the students throughout the bootcamp. Normally located in the "Documents" folder of the device.
+	Application - Root folder for the application
+	Cloned Project - Project cloned from a repository created by the instructor
+
+==========
+Discussion
+==========
+
+========================================================
+Notes for CLI - Command Line Interface Commands:
+
+GUI is a graphical representation in which the users can interact with software or devices through clickable icons
+
+CLI is a console or text-based represenration which a user types commands in a terminal
+
+pwd - present working directory - shows the current folder we are working on
+
+ls - list the files and folders contained by the current directory
+
+mkdir <folderName> - creates a new directory
+
+cd <folderName> - change directories
+
+touch <fileName> - used to create files
+
+cd - (go back one directory)
+
+cd .. - (one folder up)
+
+rm <name of the file> - to delete file 
+
+rmdir <name of the folder> - to delete an empty directory
+
+rm -r <directory_name> - This command will remove the specified directory and its contents recursively. It will prompt you for confirmation before deleting each file.
+
+rm -rf <directory_name> - This command will forcefully remove the specified directory and its contents without any confirmation prompts. Use this with caution, as it does not provide a chance to recover deleted data.
+========================================================
+
+
+1. Open a terminal.
+	Device
+
+		Mac and Linux
+			open the "Terminal" program
+		Windows
+			open the "Windows Terminal" or "Command Prompt".
+
+		Important Note:
+			- Windows Terminal is preferred for Windows users because it can have multiple tabs in a single window similar to the Terminal for Linux users.
+
+2. Create an SSH key.
+	Terminal
+
+		ssh-keygen
+
+		Important Note:
+			- After triggering the command the user will be prompted to choose a file location on where to store the SSH key in their device. Just press "Enter" to use the default location.
+			- After declaring where the SSH key will be stored, the user will be prompted to add a "passphrase" which will act as the password when using the git account with the associated SSH key. Just press "Enter" again to leave the passphrase empty for ease of access.
+			- If the students generated an SSH key with a passphrase, have them trigger the command again to replace the previous SSH key generated.
+			- Highlight the path for the default location in case triggering the command to copy the SSH key fails.
+			- It would be best to create a "discussion" folder and a "discussion.txt" file that will contain all the commands to be used in this discussion for student/trainee's reference. You may also provide them the copy of the "discussion.txt" file found inside the "discussion" folder of the repository.
+
+3. Copy the SSH key.
+	Terminal
+
+		Linux
+			xclip -sel clip < ~/.ssh/id_rsa.pub
+
+		Mac
+			pbcopy < ~/.ssh/id_rsa.pub
+
+		Windows
+			cat ~/.ssh/id_rsa.pub | clip
+
+		Important Note:
+			- The following commands will copy the contents of the "id_rsa.pub" file located inside the ".ssh" folder in the clipboard.
+			- If triggering a command returns an error, check if the path is correct and if the file exists.
+			- Alternatively, you can have the student navigate to the ".ssh" folder and locate the "id_rsa.pub" file and open it with their text editors to manually copy the contents.
+			- The ".ssh" folder is a hidden folder, refer to "references" section of this file to find the documentation on how to view hidden folders.
+			- For Linux users, an error might be encountered xclip is not recognized as an internal or external command. Install xclip using the following command:
+				- sudo apt-get update -y
+				- sudo apt-get install -y xclip
+
+4. Add the generated SSH key to git.
+	Browser > GitLab/GitHub
+
+		Zuitt Git
+			https://git.zuitt.co/user/settings/keys
+
+5. Configure the git account in the device/project.
+	Terminal
+
+		Configure the global user email
+			git config --global user.email "[git account email address]"
+
+			example:
+				git config --global user.email "john.doe@mail.com"
+
+		Configure the global user name
+			git config --global user.name "[git account username]"
+
+			example:
+				git config --global user.name "johndoe"
+
+		Configure project email
+			git config user.email "[git account email address]"
+
+			example:
+				git config user.email "john.doe@mail.com"
+
+		Configure project username
+			git config user.name "[git account username]"
+
+			example:
+				git config user.name "johndoe"
+
+		Important Note:
+			- For instructors who are undergoing this step again after their first batch, executing the git config again will just update your current git configuration.
+			- Configuring the global username and email will be the default git credentials used when using git commands.
+			- Configuring the project username and email is useful for manipulating git repositories for a temporary user.
+			- Git account email maybe found in the following links:
+				https://git.zuitt.co/arvin.lacdao
+
+6. Check the git user credentials.
+	Terminal
+
+		git config --global --list
+
+7. Create a "discussion" folder and a "discussion.txt" file.
+	Batch Folder > individual > s02 > discussion > discussion.txt
+
+		Git Demonstration
+
+		Hello World!
+
+8. Open a terminal in the project folder.
+	Device > Application
+
+		Linux
+			Right Click + Project Folder + Open in Terminal
+
+		Mac
+			Open Terminal + Drag and drop Project Folder to terminal
+
+		Windows
+			Right Click + Project Folder + Git Bash Here
+
+9. Initialize a local git repository.
+	Application > Terminal
+
+		git init
+
+		Important Note:
+			- Triggering the command will create a ".git" folder inside of the project folder.
+			- This folder will contain all the necessary git information about a project's local repository such as commits and remote git links.
+			- The ".git" folder is a hidden folder, refer to "references" section of this file to find the documentation on how to view hidden folders.
+
+10. Peek at the states of the files/folders.
+	Application > Terminal
+
+		git status
+
+		Important Note:
+			- Triggering this command will display all updates not yet saved to the latest commit version of the project.
+			- A "commit" is a snapshot or a version of the project.
+
+11. Stage the files in preparation for creating a commit.
+	Application > Terminal
+
+		Staging files individually
+			git add [filename]
+
+			example:
+				git add discussion.txt
+
+		Staging all files
+			git add .
+			git add -A
+
+		Important Note:
+			- Triggering this command will "add" or "stage" the files preparing them to be included in the next commit/snapshot of the project.
+			- Adding all files is normal practice to make sure all files that were updated would be included in the next commit. Individually staging files is useful for minor revisions.
+
+12. Create a commit.
+	Application > Terminal
+
+		git commit -m "[message]"
+
+		example:
+			git commit -m "initial commit"
+
+		Important Note:
+			- Triggering this command will create a "commit" or a snapshot of the project in the local repository coming from changes added through the "git add" command.
+			- "initial commit" is used in the message to help developers identify the first commit.
+			- Succeeding commit messages should be descriptive of the changes to the project. (ex. "added text to discussion.txt file")
+
+13. Check the commit history.
+	Application > Terminal
+
+		git log
+
+		git log --oneline
+
+		Important Note:
+			- The --oneline option will simplify the output.
+
+14. Create a git repository.
+	Browser > Zuitt Git
+
+		Important Note:
+			Make sure to have students create their repositories in Zuitt Git as lastname-firstname
+				- Make sure they use their Batch organization
+
+15. Connect to a remote repository.
+	Application > Terminal
+
+		git remote add [remote-name] [git-repository-link]
+
+		example:
+			git remote add origin git@ec2-54-147-90-61.compute-1.amazonaws.com:b000/s02.git
+			git remote add secondary git@ec2-54-147-90-61.compute-1.amazonaws.com:b001/s02.git
+
+		Important Note:
+			- Trigerring this command will add a reference to a git project.
+			- "origin" is mostly used to help developers identify the main remote repository linked to the project.
+			- Multiple remote repositories can be added to a project. This would be useful for students when dealing with cloned repositories or for creating multiple repositories for their capstone projects.
+			- If the students incorrectly added the wrong remote link, changing the url will be discussed.
+
+16. Check the remote names and their corresponding urls.
+	Application > Terminal
+	
+		git remote -v
+
+17. Upload the local repository to a remote repository.
+	Application > Terminal
+
+		git push [remote-name] [branch-name]
+
+		example:
+			git push origin master
+
+		Important Note:
+			- Triggering this command will "push" the changes from the local repository to the remote repository.
+			- "push" is a term used uploading the local repository to the remote repository.
+			- This command is commonly used since because origin is considered as the main repository for a project.
+			- "master" refers to a branch or a snapshot of your project.
+
+18. Clone a repository.
+	Documents > Terminal
+
+		git clone [git-repository-link]
+
+		example:
+			git clone git@ec2-54-147-90-61.compute-1.amazonaws.com:b000/s02.git
+
+		Important Note:
+			- Triggering this command will download your git project into the current directory the terminal is located at.
+			- "clone" is a term used downloading the remote repository to a device and creating a copy of the project.
+			- This is different from git pull which downloads the latest updates from a remote repository to a local repository.
+			- The instructor may create a sample repository for students to clone and can also be used to demonstrate how the git pull command works.
+
+
+19. Pull the changes from a remote repository.
+
+	19a. Add some additional text.
+		Cloned Project > discussion.txt
+
+			...
+
+			Hello World!
+
+			This text was generated from the remote repository.
+
+			Important Note:
+				- Only the instructor will do this to demonstrate how the command works.
+
+	19b. Push the changes to the remote repository.
+		Cloned Project > Terminal
+
+			git add .
+			git commit -m "added text for git pull"
+			git push origin master
+
+			Important Note:
+				- Only the instructor will do this to demonstrate how the command works.
+
+	19c. Pull the changes.
+		Cloned Project > Terminal
+
+			git pull [remote-name] [branch-name]
+
+			example:
+				git pull origin master
+
+========
+Activity
+========
+
+Instructions that can be provided to the students for reference:
+
+Activity References:
+
+	About Version Control
+		https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control
+	A Visual Guide to Version Control
+		https://betterexplained.com/articles/a-visual-guide-to-version-control/
+	A Visual Git Reference
+		https://marklodato.github.io/visual-git-guide/index-en.html
+	How to Write a Git Commit Message
+		https://chris.beams.io/posts/git-commit
+
+	Show hidden files and folders:
+		Linux
+			https://devconnected.com/how-to-show-hidden-files-on-linux/
+		Mac
+			https://www.macworld.co.uk/how-to/show-hidden-files-mac-3520878/#:~:text=How%20to%20see%20hidden%20files%20in%20macOS,folders%20just%20press%20Command%20%2B%20Shift%20%2B
+		Windows
+			https://support.microsoft.com/en-us/windows/view-hidden-files-and-folders-in-windows-10-97fbc472-c603-9d90-91d0-1166d1d9f4b5
+	Git Init
+		https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-init#:~:text=The%20git%20init%20command%20creates,run%20in%20a%20new%20project.
+	Git Remote
+		https://www.atlassian.com/git/tutorials/syncing
+	Git Add
+		https://www.atlassian.com/git/tutorials/saving-changes
+	Git Commit
+		https://www.atlassian.com/git/tutorials/saving-changes/git-commit
+	Git Push
+		https://www.atlassian.com/git/tutorials/syncing/git-push
+	Git Clone
+		https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-clone#:~:text=git%20clone%20is%20primarily%20used,copies%20an%20existing%20Git%20repository.
+	Git Pull
+		https://www.atlassian.com/git/tutorials/syncing/git-pull#:~:text=The%20git%20pull%20command%20is,Git%2Dbased%20collaboration%20work%20flows.
+
+Activity:
+
+1. In the s02 folder, create an activity folder and an aboutme.txt file inside of it.
+2. Then, navigate back to your local individual folder. 
+3. Then using CLI commands in the terminal, initialize a local git repository using git init.
+4. Peek at the states of the files/folders using git status.
+5. Stage the files in preparation for creating a commit using git add.
+6. Create a commit/version using git commit.
+7. Check the commit history using git log/git log --oneline.
+8. Then, back in sublime text, Add a paragraph in the aboutme.txt file that describes your motivation in joining the bootcamp. 
+	- Make sure to save with ctrl + s or cmd + s
+9. Check the status of the files/folders, stage the files and create a commit.
+	- Make sure to include the word ‘motivation’ in the commit message
+10. Add a paragraph that briefly narrates your work experience.
+11. Check the status of the files/folders, stage the files and create a commit again.
+	- Make sure to include the word ‘experience’ in the commit message
+12. Connect to the remote repository using git remote add origin.
+13. Upload your changes to the GitLab project by doing git push origin master.
+14. Add the link/url of the GitLab Remote Repository in Boodle.
+
+Stretch Goal:
+
+1. Clone a repository that will be provided by your instructor inside the activity folder.
+2. Delete the .git folder inside of the cloned repository.
+3. Pull the changes from the remote repository on the cloned project.
+4. Upload your changes again to the frontend online repository by doing doing git add, commit and git push origin master.
+
+
+=================
+Activity Solution
+=================
+
+1. Create an "activity" folder and an "aboutme.txt" file.
+	Batch Folder > individual > s02 > activity > aboutme.txt
+
+		John Doe
+
+2. Initialize a local git repository.
+	Application > Terminal
+
+		git init
+
+3. Peek at the states of the files/folders.
+	Application > Terminal
+
+		git status
+
+4. Stage the files in preparation for creating a commit.
+	Application > Terminal
+
+		git add .
+		git add -A
+
+5. Create a commit.
+	Application > Terminal
+
+		git commit -m "initial commit"
+
+6. Check the commit history.
+	Application > Terminal
+
+		git log
+		git log --oneline
+
+7. Add a paragraph that describes your motivation in joining the bootcamp.
+	Application > aboutme.txt
+
+		John Doe
+
+		I want to learn how to code and become a software engineer.
+
+8. Check the status of the files/folders, stage the files and create a commit.
+	Application > Terminal
+
+		git status
+		git add .
+		git commit -m "added a paragraph for my motivation"
+
+9. Add a paragraph that briefly narrates your work experience.
+	Application > aboutme.txt
+
+		...
+
+		I want to learn how to code and become a software engineer.
+
+		I currently work as an instructor and I love to teach.
+
+10. Check the status of the files/folders, stage the files and create a commit.
+	Application > Terminal
+
+		git status
+		git add .
+		git commit -m "added a paragraph for my work experience"
+
+11. Create a git repository in Zuitt Git.
+	Browser > Zuitt Git
+
+		Important Note:
+			- Have the students create a new repository using their batch organization.
+
+12. Connect to a remote repository.
+	Application > Terminal
+
+		git remote add origin <repo ssh URL>
+
+13. Upload the local repository to a remote repository.
+	Application > Terminal
+
+		git push origin master
+
+14. Clone a repository.
+	Batch Folder > individual > s02 > activity
+
+		git clone git@ec2-54-147-90-61.compute-1.amazonaws.com:b000/s02.git
+
+		Important Note:
+			- Use the same repository that was used to demonstrate cloning for the students
+
+15. Pull the changes from a remote repository.
+
+	15a. Add some additional text.
+		Cloned Project > discussion.txt
+
+			...
+
+			This text was generated from the remote repository.
+
+			This text confirms a git pull command was done for the activity.
+
+			Important Note:
+				- Only the instructor will do this to demonstrate how the command works.
+
+	15b. Push the changes to the remote repository.
+		Cloned Project > Terminal
+
+			git add .
+			git commit -m "added text for git pull"
+			git push origin master
+
+			Important Note:
+				- Only the instructor will do this to demonstrate how the command works.
+
+	15c. Pull the changes.
+		Cloned Project > Terminal
+
+			git pull origin master
+
+			Important Note:
+				- Have the students remove the ".git" folder inside of the cloned repository after pulling the changes to avoid having git pushing issues.

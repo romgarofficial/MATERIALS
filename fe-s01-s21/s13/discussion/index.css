@@ -1,0 +1,85 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/*==========Float property==========*/
+
+.img-float {
+    width: 250px;
+    height: 250px;
+    float: inherit;
+}
+
+
+/*==========CSS Positioning==========*/
+.parent-element {
+    background-color: skyblue;
+    padding: 50px 10px;
+    position: relative;
+    height: 800px;
+}
+
+
+.child-one {
+    background-color: gray;
+    padding: 10px;
+}
+
+
+.child-two {
+    background-color: yellow;
+    padding: 10px;
+    position: sticky;
+    top: 10px;
+}
+
+.child-three {
+    background-color: gray;
+    padding: 10px;
+}
+
+html {
+    height: 800vh;
+}
+
+
+/*==========Z index==========*/
+
+.container {
+  position: relative;
+}
+
+.black-box {
+  position: relative;
+  z-index: 1;
+  border: 2px solid black;
+  height: 100px;
+  margin: 30px;
+}
+
+.gray-box {
+  position: absolute;
+  z-index: 3; /* gray box will be above both green and black box */
+  background: lightgray;
+  height: 60px;  
+  width: 70%;
+  left: 50px;
+  top: 50px;
+}
+
+.green-box {
+  position: absolute;
+  z-index: 2; /* green box will be above black box */
+  background: lightgreen;
+  width: 35%;
+  left: 270px;
+  top: -15px;
+  height: 100px;
+}
+
+

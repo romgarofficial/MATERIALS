@@ -1,0 +1,19 @@
+{
+  "name": "d2",
+  "version": "1.0.0",
+  "description": "REST with Separation of concern",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:tuitt/students/batch84/resources/s17/d2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^8.2.1"
+  }
+}

@@ -1,0 +1,138 @@
+/*===============CSS Reset===============*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/*===============General===============*/
+button {
+    color: white;
+    padding: 10px;
+    width: 9rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-color: transparent;
+    border-radius: 25px;
+}
+
+/*===============nav section===============*/
+nav {
+    padding: 3px;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+}
+
+.right-nav {
+    float: right;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.nav, .nav-logo {
+    margin: 0.5rem;
+    padding: 3px;
+}
+
+#nav-button {
+    background-color: #c2195b;
+}
+
+#logo {
+    padding-top: 8px;
+    padding-left: 5px;
+}
+
+/*===============landing page section===============*/
+#bg-image {
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("https://d3ojsfl21hfxhc.cloudfront.net/assets/zuitt/programdetails2_w.jpg")
+    ;
+    background-repeat : no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 3rem 0;
+    color: white;
+}
+
+.container {
+    text-align: right;
+    width:40%;
+    position: relative;
+    left: 55%;
+}
+
+.title {
+    font-family: "Zilla Slab",serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    font-weight: 300;
+    width: 75%;
+    margin-left: auto;
+    margin-top: 1em;
+}
+
+#apply-button {
+    margin-top: 1em;
+    background-color: #c2195b;
+}
+
+/*===============main section===============*/
+#main {
+    padding-top: 75px;
+    text-align: center;
+}
+
+.title-2 {
+    font-size: 2rem;
+    font-family: "Zilla Slab",serif;
+    font-weight: 600;
+}
+
+.description {
+    margin: 3rem 0;
+    font-weight: 300;
+}
+
+#book-button {
+    background-color: #336589;
+}
+
+/*===============footer section===============*/
+footer {
+    /*creates space between the span tags and the footer border*/
+    margin-top: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer span {
+    /*creates space horizontally between span tags*/
+    /*best to use equal measurement on both sides for horizontal alignment.*/
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    /*margin: 0 0.5rem;*/
+    font-weight: 300;
+}
+
+
+
+
+
+
+
+
+
+
+

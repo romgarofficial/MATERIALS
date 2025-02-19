@@ -1,0 +1,812 @@
+ <!--
+======================================
+S04 - HTML - Attributes and Hyperlinks
+======================================
+-->
+
+<!-- 
+
+References:
+	HTML attributes
+		w3schools
+			https://www.w3schools.com/html/html_attributes.asp
+		tutorialrepublic
+			https://www.tutorialrepublic.com/html-tutorial/html-attributes.php
+	HTML Entities
+		https://www.w3schools.com/html/html_entities.asp
+	Absolute vs Relative links
+		https://www.w3schools.com/html/html_links.asp
+	Image tag and supported image formats
+		https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img
+	Place Puppy
+		https://place-puppy.com/
+	Place Kitten
+		https://placekitten.com/
+	Zuitt Website
+		https://zuitt.co/
+	Attribute reference
+		https://www.w3schools.com/tags/ref_attributes.asp
+		https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes
+	Creating Git Projects:
+		GitLab
+			https://gitlab.com/projects/new#blank_project
+		GitHub
+			https://github.com/new
+	Boodle
+		https://boodle.zuitt.co/login/
+
+Definition of terms:
+	Batch Folder - The batch folder that will store all files of the students throughout the bootcamp. Normally located in the "Documents" folder of the device.
+	Application - Root folder for the application
+
+-->
+
+<!-- 
+==========
+Discussion
+========== 
+-->
+<!-- 
+	=======
+	Skills Check for PT Batch
+	=======
+ -->
+ <!-- 
+	1. Slides link: https://docs.google.com/presentation/d/1dCsnJUSQeBRcY8SUJ_PXiex_b-kbH8nhtNxnCHThym0/edit#slide=id.g29d33c71f99_0_793
+		a. Use one of the two images to be given as activity to the students.
+	2. for 3-5 minutes, have the students identify the tags discussed in the previous session. 
+	
+	==**
+	Additional Notes
+	**==
+	- For other tags which are not discussed yet, you may say that they will be discussed in the next sessions e.g. links
+	- use this activity as a review of the last session and as a bridge going to the next session
+  -->
+
+
+<!-- 
+1. Create a "discussion" folder and an "index.html" file.
+	Batch Folder > individual > s04 > discussion >  index.html
+-->
+
+		<!-- html + "Tab" key -->
+		<!DOCTYPE html>
+		<html>
+			<head>
+			    <meta charset="utf-8">
+			    <title>HTML Attributes and Links</title>
+			</head>
+			<body>
+
+			</body>
+		</html>
+
+		<!-- 
+		Important Note:
+			- Create the initial source code using sublime text editor's autocomplete feature. Students should already have sufficient knowledge for creating basic HTML tags.
+		-->
+
+<!-- 
+2. Add html tags for content.
+	Application > index.html
+-->
+
+		<!-- ... -->
+		<html>
+			<!-- ... -->
+			<body>
+
+				<h2>HTML Attributes</h2>
+
+				<p><em>Modifiers of element behaviors.</em></p>
+
+			</body>
+		</html>
+
+<!-- 
+3. Add the align attribute to the paragraph tag.
+	Application > index.html
+-->
+
+		<!-- ... -->
+		<html>
+			<!-- ... -->
+			<body>
+
+				<!-- ... -->
+
+				<!-- The align attribute changes the alignment of the paragraph element -->
+				<p align="center"><em>Modifiers of element behaviors.</em></p>
+
+			</body>
+		</html>
+
+		<!-- 
+		Important Note:
+			- HTML elements have a default "behavior" when shown in a browser. Attributes allow us to change these behaviors.
+			- paragraph tags by default are aligned to the left.
+			- The "align" attribute changes the alignment of the paragraph element.
+		-->
+
+<!-- 
+4. Add another set of html tags for content.
+	Application > index.html
+-->
+
+		<!-- ... -->
+		<html>
+			<!-- ... -->
+			<body>
+
+				<!-- ... -->
+				<p align="center"><em>Modifiers of element behaviors.</em></p>
+
+				<h2>HTML Images</h2>
+
+				<p><em>An image can be shown using &lt;img&gt; tag along with its <strong>src</strong> attribute.</em></p>
+
+			</body>
+		</html>
+
+		<!-- 
+		Important Note:
+			- &lt; and &gt; are called HTML entities. They're used to include special characters into text. Some special characters used in HTML are read as part of the code. The angle braces (<>) is a common example of this. To avoid any errors in code we use HTML entities.
+			- Refer to "references" section of this file to find the documentation for a list HTML entities.
+		-->
+
+<!-- 
+5. Add the align attribute to the paragraph tag.
+	Application > index.html
+-->
+
+		<!-- ... -->
+		<html>
+			<!-- ... -->
+			<body>
+
+				<!-- ... -->
+
+				<p align="right">
+					<em>
+						An image can be shown using &lt;img&gt; tag along with its <strong>src</strong> attribute.
+					</em>
+				</p>
+
+			</body>
+		</html>
+
+<!-- 
+6. Add an image tag and a paragraph tag to show the code line as text.
+	Application > index.html
+-->
+
+		<!-- ... -->
+		<html>
+			<!-- ... -->
+			<body>
+
+				<!-- ... -->
+
+				<p align="right">
+					<!-- ... -->
+				</p>
+
+				<!-- Adds an image using absolute linking -->
+				<img src="https://place-puppy.com/300x300">
+
+				<p>
+					<code>
+						&lt;img src="https://place-puppy.com/300x300"&gt;
+					</code>
+				</p>
+
+			</body>
+		</html>
+
+		<!-- 
+		Important Note:
+			- <img> tag - used to include images. img tags create inline elements.
+			- <code> tag - used to define a piece of computer code and displays text in the browser using it's default monospace font. code tags create inline elements.
+			- The "src" attribute accepts a url from an online resource. The example provided above is an absolute link.
+			- Any link that's outside of your current domain are considered absolute links. "Domains" refer to the name of a website.
+			- Refer to "references" section of this file to find the documentation about absolute and relative links.
+			- Getting a url/link of an online image resource can be done using the following:
+				- Browser > web page > image + Right click + Copy image address
+			- Refer to "references" section of this file to find the link to place puppy or place kitten which are online resources that can be used for image placeholders.
+		-->
+
+<!-- 
+7. Create an "images" folder and save an image inside of it.
+	Application > images
+-->
+
+		<!-- 
+		Important Note:
+			- Saving a copy of an online image resource can be done using the following:
+				- Browser > web page > image + Right click + Save image as
+			- Refer to "references" section of this file to find the documentation for a list of supported image formats.
+			- JPEG formats have different file extensions (e.g. .jpg, .jpeg, .jfif, .pjpeg and .pjp). This is important to take note when using relative linking.
+		-->
+
+<!-- 
+8. Add another image tag and additional content for supported image extensions.
+	Application > index.html
+-->
+
+		<!-- ... -->
+		<html>
+			<!-- ... -->
+			<body>
+
+				<!-- ... -->
+				<p>
+					<code>
+						&lt;img src="https://place-puppy.com/300x300"&gt;
+					</code>
+				</p>
+
+				<!-- Adds an image using relative linking -->
+				<img src="./images/zuittlogo.png">
+
+				<p>
+				    <code>
+				        &lt;img src="./images/zuittlogo.png"&gt;
+				    </code>
+				</p>
+
+				<p>Valid image extensions are the following:</p>
+				<ol>
+		            <li>png</li>
+		            <li>jpg</li>
+		            <li>gif</li>
+		            <li>svg</li>
+		            <li>webp</li>
+		        </ol>
+
+			</body>
+		</html>
+
+		<!-- 
+		Important Note:
+			- The dot (.) symbol in the relative link refers to the current directory.
+			- The forward slash (/) symbol refers to accessing a different directory/folder.
+			- The filename is added after the last forward slash (/) symbol and includes the file extension.
+			- Most common errors students encounter has to do with typographical error:
+				- Using relative links for images is case sensitive.
+				- ".jpg" and ".jpeg" are also different file extensions.
+			- Refer to "references" section of this file to find the link to the zuitt website where you can download the image for the discussion.
+		-->
+
+<!-- 
+9. Add the type attribute to the ol tag.
+	Application > index.html
+-->
+
+		<!-- ... -->
+		<html>
+			<!-- ... -->
+			<body>
+
+				<!-- ... -->
+				<ol type="a">
+		            <li>png</li>
+		            <li>jpg</li>
+		            <li>gif</li>
+		            <li>svg</li>
+		            <li>webp</li>
+		        </ol>
+
+			</body>
+		</html>
+
+		<!-- 
+		Important Note:
+			- The "type" attribute changes the numbered points of the ol element. The default type is the integer numbers.
+			- Other values for the type attribute are the following:
+				- 1
+				- A
+				- i
+				- I
+			- The modern way of changing the style of a list is done using CSS.
+		-->
+
+<!-- 
+10. Add the reversed attribute to the ol tag.
+	Application > index.html
+-->
+
+		<!-- ... -->
+		<html>
+			<!-- ... -->
+			<body>
+
+				<!-- ... -->
+				<ol type="a" reversed>
+		            <li>png</li>
+		            <li>jpg</li>
+		            <li>gif</li>
+		            <li>svg</li>
+		            <li>webp</li>
+		        </ol>
+
+			</body>
+		</html>
+
+		<!-- 
+		Important Note:
+			- The "reversed" attribute reverses the order of the bullet points.
+			- Some attributes have a boolean value. Adding the reversed attribute changes the "reversed" attribute of the ol element to true.
+		-->
+
+<!-- 
+10. Add a header tag and an anchor/a tag.
+	Application > index.html
+-->
+
+		<!-- ... -->
+		<html>
+			<!-- ... -->
+			<body>
+
+				<!-- ... -->
+				<ol type="a">
+				    <!-- ... -->
+				</ol>
+
+				<h2>HTML Links</h2>
+
+				<h4>Absolute Link</h4>
+				<!-- Creates a hyperlink element that redirects to a different page -->
+				<a href="https://zuitt.co">I'm a hyperlink</a>
+
+			</body>
+		</html>
+
+		<!-- 
+		Important Note:
+			- <a> tag - creates a hyperlink element when clicked will redirect to a different page. a tags create inline elements.
+			- The "href" attribute means "hypertext reference" which is used to create a link to a different page.
+			- "Links" refer to a web page address (the location indicated in the href attribute) while "hyperlinks" are page elements that you can click to go to a specific web page address.
+		-->
+
+<!-- 
+11. Create a "link.html" file.
+	Application > link.html
+-->
+
+		<!DOCTYPE html>
+		<html>
+		    <head>
+		        <title>Link</title>
+		    </head>
+		    <body>
+
+		        <p>This is the link page.</p>
+
+		        <p>Go back to index.html.</p>
+
+		        <p>Go to images/index.html page.</p>
+
+		    </body>
+		</html>
+
+<!-- 
+12. Add another paragraph tag and an a tag with a relative link.
+	Application > index.html
+-->
+
+		<!-- ... -->
+		<html>
+			<!-- ... -->
+			<body>
+
+				<!-- ... -->
+				<a href="https://zuitt.co">I'm a hyperlink</a>
+
+				<h4>Relative Link</h4>
+				<!-- Redirects to the link.html file -->
+				<p>Go to <a href="./link.html">link.html</a> page.</p>
+
+			</body>
+		</html>
+
+<!-- 
+13. Add an id attribute.
+	Application > index.html
+-->
+
+		<!-- ... -->
+		<html>
+			<!-- ... -->
+			<body>
+
+				<h2 id="top">HTML Attributes</h2>
+
+				<!-- ... -->
+
+			</body>
+		</html>
+
+		<!-- 
+		Important Note:
+			- The "id" attribute assigns a unique named identifier to an element.
+		-->
+
+<!-- 
+14. Add another paragraph tag and an a tag with a relative link to the "top" id.
+	Application > index.html
+-->
+
+		<!-- ... -->
+		<html>
+			<!-- ... -->
+			<body>
+
+				<!-- ... -->
+				<a href="https://zuitt.co">I'm a hyperlink</a>
+
+				<h4>Relative Link</h4>
+				<!-- Redirects to the link.html file -->
+				<p>Go to <a href="./link.html">link.html</a> page.</p>
+
+				<!-- Redirects to the HTML element with the top id attribute -->
+				<p>Go to <a href="#top">top</a></p>
+
+			</body>
+		</html>
+
+<!-- 
+15. Add an anchor/a tag.
+	Application > link.html
+-->
+
+		<!-- ... -->
+		<html>
+		    <!-- ... -->
+		    <body>
+
+		        <!-- ... -->
+
+		        <!-- Redirects back to the index.html file -->
+		        <p>Go back to <a href="./index.html">index.html</a>.</p>
+
+		        <!-- ... -->
+
+		    </body>
+		</html>
+
+<!-- 
+16. Add another anchor/a tag.
+	Application > index.html
+-->
+		
+		<!-- ... -->
+		<html>
+			<!-- ... -->
+			<body>
+
+				<!-- ... -->
+
+				<p align="right">
+				    <!-- ... -->
+				</p>
+
+				<!-- HTML tags wrapped inside an anchor/a tag will become a clickable element -->
+				<a href="https://place-puppy.com/">
+					<img src="https://place-puppy.com/300x300">
+				</a>
+
+				<p>
+				    <!-- ... -->
+				</p>
+
+				<!-- ... -->
+
+			</body>
+		</html>
+
+		<!-- 
+		Important Note:
+			- Any HTML tag wrapped inside an anchor/a tag will become a clickable element.
+		-->
+
+<!-- 
+17. Add the target attribute to the a tag in for the image.
+	Application > index.html
+-->
+
+		<!-- ... -->
+		<html>
+			<!-- ... -->
+			<body>
+
+				<!-- ... -->
+
+				<a href="https://zuitt.co" target="_blank">
+					<img src="https://d3ojsfl21hfxhc.cloudfront.net/assets/zuitt/zuittlogo.png">
+				</a>
+
+				<!-- ... -->
+
+			</body>
+		</html>
+
+
+		<!-- 
+		Important Note:
+			- The "target" attribute defines where the link will be opened. Providing the value of "_blank" will open the link in a new tab. By default hyperlinks open pages in the same tab.
+		-->
+
+<!-- 
+18. Add another paragraph tag with a link to a reference list of attributes.
+	Application > index.html
+-->
+
+		<!-- ... -->
+		<html>
+			<!-- ... -->
+			<body>
+
+				<!-- ... -->
+				<ol type="a">
+				    <!-- ... -->
+				</ol>
+
+				<p>Take a look at w3schools attribute references <a href="https://www.w3schools.com/tags/ref_attributes.asp" target="_blank">here</a>.</p>
+
+				<h2>HTML Links</h2>
+
+				<!-- ... -->
+
+			</body>
+		</html>
+
+
+		<!-- 
+		Important Note:
+			- The "target" attribute defines where the link will be opened. Providing the value of "_blank" will open the link in a new tab. By default hyperlinks open pages in the same tab.
+		-->
+
+<!-- 
+19. Create another "index.html" file.
+	Application > images > index.html
+-->
+
+		<!DOCTYPE html>
+		<html>
+		    <head>
+		        <title>Images</title>
+		    </head>
+		    <body>
+
+		        <p>This is the images page.</p>
+
+		        <p>Go back to ../index.html.</p>
+
+		        <p>Go to ../link.html page.</p>
+
+		    </body>
+		</html>
+
+<!-- 
+20. Add an anchor/a tag.
+	Application > images > index.html
+-->
+
+		<!-- ... -->
+		<html>
+		    <!-- ... -->
+		    <body>
+
+		        <!-- ... -->
+
+		        <!-- Redirects back to the link.html file -->
+		        <p>Go to <a href="../link.html">../link.html</a> page.</p>
+
+		    </body>
+		</html>
+
+		<!-- 
+		Important Note:
+			- The double dot (..) symbol in the relative link refers to the parent directory.
+		-->
+
+<!-- 
+21. Add another anchor/a tag.
+	Application > link.html
+-->
+
+		<!-- ... -->
+		<html>
+		    <!-- ... -->
+		    <body>
+
+		        <!-- ... -->
+
+		        <!-- Redirects back to the index.html file in the images folder -->
+		        <p>Go to <a href="./images/index.html">images/index.html</a> page.</p>
+
+		    </body>
+		</html>
+
+<!-- 
+22. Add another anchor/a tag.
+	Application > images > index.html
+-->
+
+		<!-- ... -->
+		<html>
+		    <!-- ... -->
+		    <body>
+
+		        <!-- ... -->
+
+		        <!-- Redirects back to the index.html file in the root folder -->
+		        <p>Go back to <a href="../index.html">../index.html</a>.</p>
+
+		        <!-- ... -->
+
+		    </body>
+		</html>
+
+<!-- 
+========
+Activity
+========
+-->
+
+<!--
+============
+Instructions
+============
+-->
+
+<!--
+1. In the S04 folder, Create the files and folders from the shown diagram.
+2. For each and every HTML file, it should have the necessary links going to the rest of the HTML files in the diagram.
+3. Create an images folder inside the activity folder to keep all of the images in a single directory.
+4. Each HTML file should have the following: 
+	- Heading that indicates its name and location. (e.g. You are at the activity/index page)
+	- A unique image.
+	- A list with bullet points pointing to the other pages using relative linking.
+5. Update your local individual git repository and push to git with the commit message of Add activity code s04.
+6. Add the link in Boodle for s04.
+
+Stretch Goals:
+1. Add a page with a list of names and images of your favorite singers.
+	- The page should be able to link back to the music/index.html page
+	- The page should be accessible from the music/index.html page
+2. Add a page with a list of names and images of your favorite songs.
+Add a youtube link to the song.
+	- The page should be able to link back to the music/index.html page
+	- The page should be accessible from the music/index.html page
+-->
+
+<!-- 
+1. Create an "activity" folder and an "index.html" file.
+	Batch Folder > S03 > activity > index.html
+-->
+
+		<!DOCTYPE html>
+		<html>
+		    <head>
+		        <title>Activity: Attributes and Hyperlinks</title>
+		    </head>
+		    <body>
+
+		        <h1 align="center">You are at the activity/index page.</h1>
+		        <img src="https://place-puppy.com/300x300">
+		        <ol type="a">
+		            <li><a href="./index.html">index.html</a></li>
+		            <li><a href="./music/index.html">music/index.html</a></li>
+		            <li><a href="./music/listings.html">music/listings.html</a></li>
+		            <li><a href="./music/reviews.html">music/reviews.html</a></li>
+		        </ol>
+		        
+		    </body>
+		</html>
+
+<!-- 
+2. Create a "music" folder and an "index.html" file.
+	Application > music > index.html
+-->
+
+		<!DOCTYPE html>
+		<html>
+		    <head>
+		        <title>Activity: Attributes and Hyperlinks</title>
+		    </head>
+		    <body>
+
+		        <h1 align="center">You are at the activity/music/index page.</h1>
+		        <img src="https://place-puppy.com/250x250">
+		        <ol type="A">
+		            <li><a href="../index.html">../index.html</a></li>
+		            <li><a href="./index.html">index.html</a></li>
+		            <li><a href="./listings.html">listings.html</a></li>
+		            <li><a href="./reviews.html">reviews.html</a></li>
+		        </ol>
+		        
+		    </body>
+		</html>
+
+<!-- 
+3. Create a "listings.html" file.
+	Application > music > index.html
+-->
+
+		<!DOCTYPE html>
+		<html>
+		    <head>
+		        <title>Activity: Attributes and Hyperlinks</title>
+		    </head>
+		    <body>
+
+		        <h1 align="center">You are at the activity/music/listings page.</h1>
+		        <img src="http://placekitten.com/300/300">
+		        <ol type="i">
+		            <li><a href="../index.html">../index.html</a></li>
+		            <li><a href="./index.html">index.html</a></li>
+		            <li><a href="./listings.html">listings.html</a></li>
+		            <li><a href="./reviews.html">reviews.html</a></li>
+		        </ol>
+		        
+		    </body>
+		</html>
+
+<!-- 
+4. Create a "reviews.html" file.
+	Application > music > index.html
+-->
+
+		<!DOCTYPE html>
+		<html>
+		    <head>
+		        <title align="center">Activity: Attributes and Hyperlinks</title>
+		    </head>
+		    <body>
+
+		        <h1>You are at the activity/music/reviews page.</h1>
+		        <img src="http://placekitten.com/250/250">
+		        <ol type="I">
+		            <li><a href="../index.html">../index.html</a></li>
+		            <li><a href="./index.html">index.html</a></li>
+		            <li><a href="./listings.html">listings.html</a></li>
+		            <li><a href="./reviews.html">reviews.html</a></li>
+		        </ol>
+		        
+		    </body>
+		</html>
+
+<!-- 
+5. Create a git repository named "S04".
+	Browser > GitLab/GitHub
+-->
+
+		GitHub
+			https://gitlab.com/projects/new#blank_project
+
+		GitHub
+			https://github.com/new
+
+
+		Important Note:
+			- Have the students create a new repository inside the zuitt subfolder.
+
+<!--
+6. Initialize a local git repository, add the remote link and push to git.
+	Application > Terminal
+-->
+
+		git init
+		git remote add origin [remote-repository-link]
+		git add .
+		git commit -m "Add activity code"
+		git push origin master
+
+<!-- 
+7. Add the link in Boodle.
+	Browser > Boodle
+-->
+
+		 https://boodle.zuitt.co/login/
